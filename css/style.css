@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9ed99e;
+}
+.container{
+    width: 700px;
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.circulo{
+    border: 5px solid #44749d;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#circulozinho{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #44749d;
+}
+.elice_1{
+    width: 100px;
+    height: 50px;
+    background-color: #44749d;
+    border-radius: 50% 0;
+    position: relative;
+    left: 44px;
+    top: 5px;
+    transform: rotate(20deg);
+}
+.elice_2{
+    width: 100px;
+    height: 50px;
+    background-color: #44749d;
+    border-radius: 50% 0 ;
+    position: relative;
+    right: 25px;
+    bottom: 115px;
+    transform: rotate(100deg);
+}
+.elice_3{
+    width: 100px;
+    height: 50px;
+    background-color: #44749d;
+    border-radius: 0 50%;
+    position: relative;
+    bottom: 30px;
+    right: 25px;
+    transform: rotate(-100deg);
+}
+.elice_4{
+    width: 100px;
+    height: 50px;
+    background-color: #44749d;
+    border-radius: 50% 0 ;
+    position: relative;
+    bottom: 140px;
+    right: 93px;
+}
+.btn{
+    margin-top: 50px;
+}
+button{
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: Arial;
+    margin-left: 20px;
+    background-color: #9ed99e;
+    border: none;
+    font-weight: bold;
+}
+#off{
+    color: red;
+}
+.ligar_1{
+    animation: on 2s infinite linear;
+}
+@keyframes on{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.ligar_2{
+    animation: velocidade .5s infinite linear;
+}
+@keyframes velocidade{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.ligar_3{
+    animation: velo .1s infinite linear;
+}
+@keyframes velo{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.desligar{
+    animation: off 0s infinite linear;
+}
+@keyframes off{
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@media only screen and (max-width: 600px){
+    .container{
+        width: 350px;
+        height: 500px;
+    }
+}
